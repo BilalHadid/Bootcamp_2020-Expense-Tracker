@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useReducer} from 'react';
 import './App.css';
 
+const State = 'Bilal'
+
+const reducer = (state ,action) =>{
+    switch(action){
+      case "ChangeName":
+        return "Hadid"
+      default:
+        return state
+    }
+}
+
 function App() {
+  const [name,dispatch] = useReducer(reducer,State)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{`My name is ${name}`}</h1>
     </div>
   );
 }
