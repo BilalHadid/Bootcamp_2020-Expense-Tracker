@@ -5,6 +5,11 @@ export default (state,action) => {
                 ...state,
                 transaction: state.transaction.filter(transactions => transactions.id !== action.payload)
             }
+        case 'ADD_TRANSACTION':
+            return{
+                ...state,
+                transaction:[action.payload, ...state.transaction]
+            }
         default:
             return state;
     }
