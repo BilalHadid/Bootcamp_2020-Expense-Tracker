@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -9,14 +9,14 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family:  sans-serif;
 }
 
 .container {
@@ -130,22 +130,23 @@ input[type='number'] {
   border-right: 5px solid #c0392b;
 }
 
-.delete-btn {
+.btn-delete {
   cursor: pointer;
-  background-color: #e74c3c;
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
+  background-color: red;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border: none;
+  color: white;
+  font-size: 25px;
   padding: 2px 5px;
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-100%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  line-height: 20px;
+  
 }
 
-.list li:hover .delete-btn {
+.list li:hover .btn-delete {
   opacity: 1;
 }

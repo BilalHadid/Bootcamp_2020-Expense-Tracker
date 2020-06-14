@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import {GlobalContext} from '../context/globalState'
-import './component.css'
+import './ammount.css'
 
 export const Ammount = () => {
     const {transaction} = useContext(GlobalContext)
@@ -10,7 +10,7 @@ export const Ammount = () => {
     return(
     <div className="container">
         <h4>Your Balance</h4>
-        <h1 id="balance"> ${total} </h1>
+        <h1> ${total} </h1>
     </div>
     )
 }

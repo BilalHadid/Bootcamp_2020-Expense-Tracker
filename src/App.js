@@ -8,9 +8,9 @@ import {Transaction} from './Component/addTransaction.js'
 import {GlobalProvider} from './context/globalState'
 
 function App() {
-  
   return (
-    <GlobalProvider className="App">
+    <GlobalProvider >
+     
       <h3>Expence Tracker App</h3>
       <div className="container">
           <Ammount />
