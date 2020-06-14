@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './Component/component.css'
 import { Ammount } from './Component/ammount.js';
 import { IncomeExpense } from './Component/incomeExpense'
 import {TransactionHistory } from './Component/transactionHistory'
@@ -11,7 +12,7 @@ function App() {
   return (
     <GlobalProvider className="App">
       <h3>Expence Tracker App</h3>
-      <div>
+      <div className="container">
           <Ammount />
           <IncomeExpense />
           <TransactionHistory />

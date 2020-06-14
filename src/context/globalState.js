@@ -5,8 +5,7 @@ const initialState = {
     transaction: [
         {id:1,text: "Bilal",ammount: 40},
         {id:2,text: "Hadid",ammount: -60},
-        {id:3,text: "Qasim",ammount: 80},
-        {id:4,text: "Usama",ammount: -50}
+        
     ]
 }
 export const GlobalContext = createContext(initialState);
