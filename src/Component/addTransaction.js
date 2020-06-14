@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useContext} from 'react'
 import {GlobalContext} from '../context/globalState'
+import './component.css'
 
 export const Transaction = () => {
     const [text,setText] = useState('');
@@ -22,17 +23,17 @@ export const Transaction = () => {
     return(
         <Fragment>
             <h3>Add new Transaction</h3>
-            <form onSubmit={onSubmit}>
-                <div>
+            <form id="form" onSubmit={onSubmit}>
+                <div className="form-control">
                     <label htmlFor="text">Text</label>
-                    <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter Text..." />
+                    <input id="text" type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter Text..." />
 
                 </div>
-                <div>
+                <div className="form-control">
                     <label htmlFor="ammount">Ammout <br />(negative - expense, positive - income)</label>
-                    <input type="number" value={ammount} onChange={(e) => setAmmount(e.target.value)} placeholder="Enter ammount..." />
+                    <input id="amount" type="number" value={ammount} onChange={(e) => setAmmount(e.target.value)} placeholder="Enter ammount..." />
                 </div>
-                <button>Add Transaction</button>
+                <button className="btn">Add Transaction</button>
             </form>
         </Fragment>
     )

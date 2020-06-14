@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import {GlobalContext} from '../context/globalState'
+import './component.css'
 
 export const Ammount = () => {
     const {transaction} = useContext(GlobalContext)
@@ -7,9 +8,9 @@ export const Ammount = () => {
     console.log(amounts)
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2)
     return(
-    <div>
+    <div className="container">
         <h4>Your Balance</h4>
-        <h1> ${total} </h1>
+        <h1 id="balance"> ${total} </h1>
     </div>
     )
 }
