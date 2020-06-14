@@ -4,7 +4,7 @@ import './component.css'
 
 export const Transaction = () => {
     const [text,setText] = useState('');
-    const [ammount,setAmmount] = useState();
+    const [ammount,setAmmount] = useState(0);
     
 
 
